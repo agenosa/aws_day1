@@ -3,9 +3,9 @@ const app = express();
 
 app.use(express.json())
 
+app.use(express.static("build"))
 const cars = ['acura', 'honda', 'nissan']
 
-app.use(express.static("build"))
 
 app.get("/api/cars", (req, res) => {
   res.send(cars)
