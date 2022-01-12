@@ -12,7 +12,7 @@ app.get("/api/cars", (req, res) => {
 });
 
 app.post("/api/cars", (req, res) => {
-  const carName = req.body.name
+  const carName = req.body
   cars.push(carName)
   res.send(req.body)
 
